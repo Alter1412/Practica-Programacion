@@ -1,4 +1,4 @@
-*usar consoe.log() para ver errores. En los parentesis se ingresa lo que se quiere ver 
+*usar console.log() para ver errores. En los parentesis se ingresa lo que se quiere ver 
 (el id, si algo es true, etc)
 
 jQuery Object ($):
@@ -35,3 +35,75 @@ elements more than once.
             $("#readyDemo").text.("Hello World!").css('color','red').fadeIn('slow');
         });
         </script>
+
+Custom Functions: There are several diferent ways to declare functions usineg JavaScript/jQuery
+    -Basic Function Declaration:
+        function multiply(x,y){
+            return (x*y);
+        }
+        console.log(multiply(x,y));
+    -Custom jQuery Function:
+        (function ($) {
+            $.fn.myCustomFunction = function (){
+                //add your code here
+                //you can use the object that is using this function with the word 'this'
+                //example: this.ottr('id')
+            };
+        })(jQuery);
+        $('#Selector').myCustomFunction();
+
+Querying the DOM:
+Selecting one or more elements from your document object model (DOM) to work with them
+In jQuery we query the DOM using the CSS selectors (id, class)
+    -e.g:
+        <ul id = "fruit">
+            <li>Orange</li>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Grapes</li>
+        </ul>
+
+        <script>
+            $(document).ready(function)
+            {
+                //lo siguiente hacen lo mismo. 
+
+                $("#fruit").text();// este es el mas utilizado
+                $("#ul#fruit").text();
+                $("#ul").text();
+                $("#fruit li").text();
+
+                //no hay una forma incorrecta.
+
+                console.log("#fruit");
+            }
+        </script>
+
+jQuery Selectors:
+A jQuery Selector is a function wich uses power of Cascading Style Sheets (CSS) selectors to find out
+matching elements from a DOM
+jQuery Selectors lets us quickly and easily access HTML elements or groups of elements
+Types of Selectors:
+    -ID Selectors: this uses the ID attribute of a HTML tag to select the desired element from DOM.
+    An ID should be unique, so you should ony use this selector when you want to select a single and 
+    unique element
+        -e.g:
+            <div id="idDemo"></div>
+             <script type="text/javascript">
+                $(document).ready(function()
+                {
+                    $("#idDemo").text.("div selected!");
+                });
+            </script>
+
+    -Class Selectors: This uses class attribute to select elements with a specific class can be matched
+    by writing a character (.) followed by the name of the class
+        -e.g:
+         <div class="clsDemo">Demo text!</div>
+             <script type="text/javascript">
+                $(document).ready(function()
+                {
+                    $("#+.clsDemo").style.("color","green");
+                });
+            </script>
+            *min 36:59 del video
