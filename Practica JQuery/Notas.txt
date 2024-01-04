@@ -1,0 +1,37 @@
+*usar consoe.log() para ver errores. En los parentesis se ingresa lo que se quiere ver 
+(el id, si algo es true, etc)
+
+jQuery Object ($):
+jQuery(<code>): is a JQuery function
+$(<code): is also an alternative name of jQuery function. Most comonly used
+$(document): JQuery usually takes a songle argument, in this example "document"
+A jQuery Object is like an array, wich contains zero or more indexes. It also contains object methods like:
+    -Length
+    -Context
+    -Selector
+
+jQuery Functions:
+$(document).ready(): This is called DocumentReady, wich is executed as soon as the document is ready
+for DOM manipulatio
+We assing our function to the ready event, to tell jQuery that as soon as the document is ready, we 
+want it to call our function
+    -e.g:
+    <div id="readyDemo"></div>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#readyDemo").text.("Hello World!");
+        });
+        </script>
+
+jQuery Function Chaining: Chaining is one of the most poewrful features of jQuery where it can perform
+multiple methods on the same set of elements, it saves us and the browser from havig to find the same
+elements more than once.
+    -e.g:
+    <div id="readyDemo"></div>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#readyDemo").text.("Hello World!").css('color','red').fadeIn('slow');
+        });
+        </script>
