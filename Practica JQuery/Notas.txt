@@ -103,7 +103,64 @@ Types of Selectors:
              <script type="text/javascript">
                 $(document).ready(function()
                 {
-                    $("#+.clsDemo").style.("color","green");
+                    $(".clsDemo").style.("color","green");
                 });
             </script>
             *min 36:59 del video
+
+    -Attribute Selectors: With this you can select elements using elements attributes
+        -e.g:
+            <h2>jQuery Selectors</h2>
+            <a href= https://www.youtube.com/watch?v=HgvIox6ehkM target = "_blank"> Link 1 </a><br>
+            <a href= https://www.youtube.com/watch?v=HgvIox6ehkM target = "_self"> Link 2 </a><br>
+            <a href= https://www.youtube.com/watch?v=HgvIox6ehkM target = "_blank"> Link 3 </a><br>
+
+            <input type = "text" name = "username" >
+
+            <script type="text/javascript">
+            $(function()
+            {
+                $("input[type]").style("border", "1px solid #ff9900");
+                $("a[target='_blank']").append(" [new window]");
+            });
+            </script>
+    -Universal Selectors: 
+        -e.g:
+             <script type="text/javascript">
+            $(function()
+            {
+                $("*").css("color", "red");
+            });
+            </script>
+
+-Possition Selectors and Pseudo-classes Selectors: 
+    -e.g:
+
+        <div>
+        <b> Bold Text </b>
+        <i> Italic Text </i>
+        <div>
+            <b> Bold Text 2</b>
+            <i> Italic Text 2</i>
+            <div>
+                <b> Bold Text  3</b>
+                </div>
+            </div>
+        </div>
+
+         <input type = "text" name = "username" >
+         <br>
+         <a href= https://www.youtube.com/watch?v=HgvIox6ehkM target = "_blank"> Link 1 </a><br>
+         <a href= https://www.youtube.com/watch?v=HgvIox6ehkM target = "_self"> Link 2 </a><br>
+         <a href= https://www.youtube.com/watch?v=HgvIox6ehkM target = "_blank"> Link 3 </a><br>
+
+
+         <script type="text/javascript">
+            $(function()
+            {
+                $("i:first").css("color", "red");
+                $("a: not([target='_blank'])").css("color","green");
+            });
+         </script>   
+
+Traversing the DOM (minuto 44:22 del video): 
